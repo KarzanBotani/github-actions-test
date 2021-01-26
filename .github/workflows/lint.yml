@@ -13,6 +13,3 @@ jobs:
       
       - run: npm run lint
       - run: git status
-
-ACTION_SECRET
-fWyAtlZDeFbvpKp5wMuFelhTeodaCfZ99znLGYXerdoDWVzP1ZYnhgVKnIHS
