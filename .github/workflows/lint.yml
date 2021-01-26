@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.4
       - name: Setup Node
-        uses: actions/bahmutov@v1.6.0
+        uses: bahmutov/npm-install@v1.6.0
       
       - run: npm run lint
       - run: git status
