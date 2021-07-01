@@ -22,6 +22,16 @@ jobs:
           NEO4J_dbms_security_auth__enabled: "false"
           NEO4J_dbms_transaction_timeout: "100s"
           NEO4JLABS_PLUGINS: '["apoc"]'
+          - NEO4J_dbms_security_procedures_whitelist=apoc.export.*,apoc.uuid.*,apoc.periodic.iterate,apoc.cypher.runFile,apoc.create.uuid,apoc.path.subgraphAll,apoc.coll.randomItems,apoc.trigger.*
+          # NEO4J_dbms_security_procedures_unrestricted: apoc.*
+          # NEO4J_dbms_connector_bolt_enabled: "true"
+          # NEO4J_apoc_import_file_enabled: "true"
+          # NEO4J_apoc_export_file_enabled: "true"
+          # NEO4J_apoc_import_file_use__neo4j__config: "true"
+          # NEO4J_ACCEPT_LICENSE_AGREEMENT: "yes"
+          # NEO4J_dbms_security_auth__enabled: "false"
+          # NEO4J_dbms_connector_bolt_advertised__address: localhost:7687
+          # NEO4JLABS_PLUGINS: '["apoc"]'
         options: >-
           --health-cmd "cypher-shell 'match (n) return count(n)'"
           --health-timeout 10s
